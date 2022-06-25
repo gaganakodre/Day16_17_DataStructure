@@ -37,18 +37,21 @@
             //Console.WriteLine("\nSorted array");
             //MergeSort.printArray(arr);
             ////uc6
-            //char[] str1 = "heart".ToCharArray();
-            //char[] str2 = "earth".ToCharArray();
+            string str1 = "heart";
+            string str2 = "earth";
 
-            //// Function call
-            //if (Anagram.areAnagram(str1, str2))
-            //    Console.Write("The two strings are " +
-            //                  "anagram of each other");
-            //else
-            //    Console.Write("The two strings are " +
-            //                  "not anagram of each other");
+            // Function call
+            if (Anagram.areAnagram(str1, str2))
+                Console.Write("The two strings are " +
+                              "anagram of each other");
+            else
+                Console.Write("The two strings are " +
+                              "not anagram of each other");
             //uc7
-            PrimeRange.PrimeNumber();
+            //PrimeRange.PrimeNumber();
+            ////uc8.1
+
+            //PrimePalindrome.countPal(100, 1000);
         }
     }
 }

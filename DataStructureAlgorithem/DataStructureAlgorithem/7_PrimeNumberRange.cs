@@ -25,21 +25,35 @@ namespace DataStructureAlgorithem
 
             for (num = StartNum; num <= LastNum; num++)
             {
-                ctr = 0;
-
-                for (i = 2; i <= num / 2; i++)
+                if(IsPrime(num))
                 {
-                    if (num % i == 0)
-                    {
-                        ctr++;
-                        break;
-                    }
+                    Console.Write(num);
                 }
 
-                if (ctr == 0 && num != 1)
-                    Console.Write("{0} ", num);
+
             }
+
             Console.Write("\n");
+
+        }
+        public static bool IsPrime(int num)
+        {
+           int  ctr = 0;
+
+            for (int i = 2; i <= num / 2; i++)
+            {
+                if (num % i == 0)
+                {
+                    ctr++;
+                    break;
+                }
+            }
+
+            if (ctr == 0 && num != 1)
+                return true;
+           
+            else
+                return false;
         }
     }
 }
