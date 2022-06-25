@@ -24,10 +24,18 @@
             //// Calling the function to print result
             //InsertionSort.printArraystring(arr1, n);
             //uc4:BubbleSort
-            int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
-            BubbleSort.bubbleSort(arr);
-            Console.WriteLine("Sorted array");
-            BubbleSort.printArray(arr);
+            //int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+            //BubbleSort.bubbleSort(arr);
+            //Console.WriteLine("Sorted array");
+            //BubbleSort.printArray(arr);
+            //uc5:MergeSort
+            int[] arr = { 12, 11, 13, 5, 6, 7 };
+            Console.WriteLine("Given Array");
+            MergeSort.printArray(arr);
+            MergeSort ob = new MergeSort();
+            ob.sort(arr, 0, arr.Length - 1);
+            Console.WriteLine("\nSorted array");
+            MergeSort.printArray(arr);
         }
     }
 }
