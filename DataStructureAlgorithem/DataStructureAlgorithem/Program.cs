@@ -28,14 +28,26 @@
             //BubbleSort.bubbleSort(arr);
             //Console.WriteLine("Sorted array");
             //BubbleSort.printArray(arr);
-            //uc5:MergeSort
-            int[] arr = { 12, 11, 13, 5, 6, 7 };
-            Console.WriteLine("Given Array");
-            MergeSort.printArray(arr);
-            MergeSort ob = new MergeSort();
-            ob.sort(arr, 0, arr.Length - 1);
-            Console.WriteLine("\nSorted array");
-            MergeSort.printArray(arr);
+            ////uc5:MergeSort
+            //int[] arr = { 12, 11, 13, 5, 6, 7 };
+            //Console.WriteLine("Given Array");
+            //MergeSort.printArray(arr);
+            //MergeSort ob = new MergeSort();
+            //ob.sort(arr, 0, arr.Length - 1);
+            //Console.WriteLine("\nSorted array");
+            //MergeSort.printArray(arr);
+            //uc6
+            char[] str1 = "heart".ToCharArray();
+            char[] str2 = "earth".ToCharArray();
+
+            // Function call
+            if (Anagram.areAnagram(str1, str2))
+                Console.Write("The two strings are " +
+                              "anagram of each other");
+            else
+                Console.Write("The two strings are " +
+                              "not anagram of each other");
         }
     }
 }
+//o/p:The two strings are anagram of each other
