@@ -52,9 +52,16 @@
             ////uc8.1
 
             //PrimePalindrome.countPal(100, 1000);
-            //uc9
-            SearchingAndSortingUsingGenerics searchingandsortingusinggenerics = new SearchingAndSortingUsingGenerics();
-            searchingandsortingusinggenerics.SearchingAndSorting();
+            ////uc9
+            //SearchingAndSortingUsingGenerics searchingandsortingusinggenerics = new SearchingAndSortingUsingGenerics();
+            //searchingandsortingusinggenerics.SearchingAndSorting();
+            ////uc10
+            //FindNumber findnumber = new FindNumber();
+            //findnumber.Find();
+            //findnumber.Question(12, 23);
+            //uc11
+            //TaskDoneByMaximumAmount taskdonebymaximumamount = new TaskDoneByMaximumAmount();
+            //taskdonebymaximumamount.tasks();
         }
     }
 }
