@@ -5,8 +5,11 @@
         public static void Main(String[] args)
         {
             //uc1
-            PermutationsOfString permutationsofstring = new PermutationsOfString();
-            permutationsofstring.permutations();
+            //PermutationsOfString permutationsofstring = new PermutationsOfString();
+            //permutationsofstring.permutations();
+            //uc2.1 proper BST
+            BinarySearchProb binarysearchprob = new BinarySearchProb();
+            binarysearchprob.binarySearch();
             //uc2:BST
             ////BinaryTree binaryTree = new BinaryTree();
             ////String[] arr = { "contribute", "geeks", "ide", "practice" };
