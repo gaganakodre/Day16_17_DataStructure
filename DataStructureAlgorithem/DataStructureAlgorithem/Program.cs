@@ -60,8 +60,8 @@
             //findnumber.Find();
             //findnumber.Question(12, 23);
             //uc11
-            //TaskDoneByMaximumAmount taskdonebymaximumamount = new TaskDoneByMaximumAmount();
-            //taskdonebymaximumamount.tasks();
+            TaskDoneByMaximumAmount taskdonebymaximumamount = new TaskDoneByMaximumAmount();
+            taskdonebymaximumamount.tasks();
         }
     }
 }
