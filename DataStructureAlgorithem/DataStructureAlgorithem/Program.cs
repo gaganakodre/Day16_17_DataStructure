@@ -4,6 +4,9 @@
     {
         public static void Main(String[] args)
         {
+            //uc1
+            PermutationsOfString permutationsofstring = new PermutationsOfString();
+            permutationsofstring.permutations();
             //uc2:BST
             ////BinaryTree binaryTree = new BinaryTree();
             ////String[] arr = { "contribute", "geeks", "ide", "practice" };
@@ -60,8 +63,14 @@
             //findnumber.Find();
             //findnumber.Question(12, 23);
             //uc11
-            TaskDoneByMaximumAmount taskdonebymaximumamount = new TaskDoneByMaximumAmount();
-            taskdonebymaximumamount.tasks();
+            //TaskDoneByMaximumAmount taskdonebymaximumamount = new TaskDoneByMaximumAmount();
+            //taskdonebymaximumamount.tasks();
+            //uc12
+            //RegexClass.CustomMessageFullNameRepalceMent();
+            //RegexClass.CustomMessagePhoneNumberRepalceMent();
+
+
+
         }
     }
 }
