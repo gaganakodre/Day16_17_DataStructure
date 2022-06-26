@@ -8,8 +8,8 @@
             //PermutationsOfString permutationsofstring = new PermutationsOfString();
             //permutationsofstring.permutations();
             //uc2.1 proper BST
-            BinarySearchProb binarysearchprob = new BinarySearchProb();
-            binarysearchprob.binarySearch();
+           // BinarySearchProb binarysearchprob = new BinarySearchProb();
+           // binarysearchprob.binarySearch();
             //uc2:BST
             ////BinaryTree binaryTree = new BinaryTree();
             ////String[] arr = { "contribute", "geeks", "ide", "practice" };
@@ -69,8 +69,11 @@
             //TaskDoneByMaximumAmount taskdonebymaximumamount = new TaskDoneByMaximumAmount();
             //taskdonebymaximumamount.tasks();
             //uc12
-            //RegexClass.CustomMessageFullNameRepalceMent();
-            //RegexClass.CustomMessagePhoneNumberRepalceMent();
+            RegexClass.CustomMessageFirstNameRepalceMent();
+            RegexClass.CustomMessageFullNameRepalceMent();
+            RegexClass.CustomMessagePhoneNumberRepalceMent();
+            RegexClass.CustomMessagedateRepalceMent();
+            
 
 
 

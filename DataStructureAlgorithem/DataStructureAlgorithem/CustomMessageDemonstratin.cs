@@ -6,70 +6,59 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 namespace DataStructureAlgorithem
 {
-    //public class RegexClass
-    //{
-    //    public Regex FirstNameRegex = new Regex(@"^(A-Z)[1](A-Za-z)[3,]?$");
-    //    public Regex FullNameRegex = new Regex(@"^(A-Z)[1](A-Za-z)[4,]?$");
-    //    public Regex PhoneNumberRegex = new Regex(@"^(91){1}\s[0-9](10)?$");
-    //    public void ValidateFullNameRegex(string FullName)
-    //    {
-    //        Console.WriteLine("\nName:" + FullName);
-    //        if (FullNameRegex.IsMatch(FullName))
-    //            Console.WriteLine("valid FullName");
-    //        else
-    //            Console.WriteLine("invalid Fullname");
-    //    }
-    //    public void ValidatePhoneNumberRegex(string PhoneNumber)
-    //    {
-    //        Console.WriteLine("\nPhoneNumber:" + PhoneNumber);
-    //        if (FullNameRegex.IsMatch(PhoneNumber))
-    //            Console.WriteLine("valid phonenumber");
-    //        else
-    //            Console.WriteLine("invalid phonenumbre");
-    //    }
-    //    public void ValidateFirstNameRegex(string FirstName)
-    //    {
-    //        Console.WriteLine("\nFirstName:" + FirstName);
-    //        if (FirstNameRegex.IsMatch(FirstName))
-    //            Console.WriteLine("valid FirstName");
-    //        else
-    //            Console.WriteLine("invalid Firstname");
-    //    }
-
-
-    //}
+    
     public class RegexClass
     {
+        
+        public static void CustomMessageFirstNameRepalceMent()
+        {
+            string input = "Shreegowri koder";
+            string pattern = "\\s[a-z]+";
+            string replacement = "";
+            string FirstNameresult = System.Text.RegularExpressions.Regex.Replace(input, pattern, replacement);
+
+            //Console.WriteLine("Original String: {0}", input);
+            //Console.WriteLine("Replacement String: {0}", FirstNameresult);
+            Console.WriteLine("Hello {0}:", FirstNameresult);
+        }
         public static void CustomMessageFullNameRepalceMent()
         {
-            string input = "Shreegowri";
-            string pattern = "(A - Z)[1](A - Za - z)[5 ,]/s(A - Za - z)[4 ,] ";
-            string replacement = " Koder ";
-            string result = Regex.Replace(input, pattern, replacement);
+            string input = "Shreegowri koder";
+            string pattern = "\\s+";
+            string replacement = "";
+            string FullNameresult = System.Text.RegularExpressions.Regex.Replace(input, pattern, replacement);
 
-            Console.WriteLine("Original String: {0}", input);
-            Console.WriteLine("Replacement String: {0}", result);
+            //Console.WriteLine("Original String: {0}", input);
+            //Console.WriteLine("Replacement String: {0}", FullNameresult);
+            Console.WriteLine("We have your fullname as {0}:in our system",FullNameresult);
         }
-        //public static void CustomMessageFirstNameRepalceMent()
-        //{
-        //    string input = "Shreegowri";
-        //    string pattern = "(A - Z)[1](A - Za - z)[5 ,]/s(A - Za - z)[4 ,] ";
-        //    string replacement = " Koder ";
-        //    string result = Regex.Replace(input, pattern, replacement);
+        public static void CustomMessagePhoneNumberRepalceMent()
+        {
+            string input = "91_ 9154684655";
+            string pattern = "[_]+";
+            string replacement = "";
+            string Phoneresult = System.Text.RegularExpressions.Regex.Replace(input, pattern, replacement);
 
-        //    Console.WriteLine("Original String: {0}", input);
-        //    Console.WriteLine("Replacement String: {0}", result);
-        //}
-        //public static void CustomMessagePhoneNumberRepalceMent()
-        //{
-        //    string input = "+919148902060";
-        //    string pattern = "\\s+";
-        //    string replacement = " ";
-        //    string result = Regex.Replace(input, pattern, replacement);
+            //Console.WriteLine("Original String: {0}", input);
+            //Console.WriteLine("Replacement String: {0}", Phoneresult);
+            Console.WriteLine("your contact number is {0}:",Phoneresult);
+        }
+        public static void CustomMessagedateRepalceMent()
+        {
+            string input = "01-/01-/-2016";
+            string pattern = "[-]+";
+            string replacement = "";
+            string Dateresult = System.Text.RegularExpressions.Regex.Replace(input, pattern, replacement);
 
-        //    Console.WriteLine("Original String: {0}", input);
-        //    Console.WriteLine("Replacement String: {0}", result);
-        //}
+            //Console.WriteLine("Original String: {0}", input);
+            //Console.WriteLine("Replacement String: {0}", Dateresult);
+            Console.WriteLine("Please, let us know in case of any clarification Thank you BridgeLabz {0}:",Dateresult);
+        }
+
+        
+
+        
+
     }
 }
 
