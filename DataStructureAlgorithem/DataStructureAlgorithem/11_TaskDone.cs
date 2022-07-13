@@ -1,46 +1,79 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DataStructureAlgorithem
 {
-    public class FindNumber1
+
+    class TaskDoneByMaximumAmount
     {
-        public static void Find()
+        public void tasks()
         {
-            Console.WriteLine("Enter a limit:");
+            Console.Write("Number of Tasks:   ");
+            int T = Convert.ToInt32(Console.ReadLine());
 
-            double N = Convert.ToInt32(Console.ReadLine());
-            int n = Convert.ToInt32(Math.Log(N, 2));
-            Console.WriteLine("Enter a guess between 0 and" + (N - 1));
-            double firstValue = 0;
-            double lastValue = N - 1;
-            while (n > 0)
+            List<List<int>> taskList = new List<List<int>>();
+
+            for (int i = 0; i < T; i++)
             {
-                int mid = (int)(Math.Round(lastValue + firstValue) / 2);
-                Console.WriteLine("Is this Greater than " + mid + "?");
-                if (Console.ReadLine() == "y")
-                {
-                    firstValue = mid;
+                int M, D;
+                List<int> inputs = new List<int>();
+                Console.Write("\nTask-{0}\nDeadline:  ", i + 1);
+                D = Convert.ToInt32(Console.ReadLine());
+                inputs.Add(D);
 
-                }
-                else
-                {
-                    lastValue = mid;
-                }
-                if ((firstValue - lastValue) == -1)
-                {
-                    Console.WriteLine("This is your Number " + (firstValue + 1));
-                    return;
-                }
+                Console.Write("Time Taken: ");
+                M = Convert.ToInt32(Console.ReadLine());
+                inputs.Add(M);
 
-                n -= 1;
+                taskList.Add(inputs);
             }
-            Console.WriteLine("Taken more Than " + n + "chances");
+            Console.WriteLine("\n\n");
 
+            List<List<int>> result = TaskDone(taskList);
+            for (int i = 0; i < result.Count; i++)
+            {
+                Console.WriteLine("Task -{0} overshoots its deadline {1} by {2}\n", i + 1, result[i][0], result[i][2]);
+            }
+        }
+
+        List<List<int>> TaskDone(List<List<int>> taskList)
+        {
+
+            int first = 0;
+            int sum = 0;
+            bool[] time = new bool[1000000];
+            for (int i = 0; i < taskList.Count; i++)
+            {
+                int deadline = taskList[i][0];
+                int minutes = taskList[i][1];
+
+                for (int j = deadline - 1; j >= first && minutes > 0; j--)
+                {
+                    if (!time[j])
+                    {
+                        time[j] = true;
+                        minutes--;
+                    }
+                }
+
+                sum = sum + minutes;
+                taskList[i].Add(sum);
+
+                for (int k = first; k < 1000000; k++)
+                {
+                    if (time[k] == false)
+                    {
+                        first = k;
+                        break;
+                    }
+                }
+            }
+            return taskList;
         }
     }
 
 }
+

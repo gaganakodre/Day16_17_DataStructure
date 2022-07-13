@@ -6,31 +6,41 @@ using System.Threading.Tasks;
 
 namespace DataStructureAlgorithem
 {
-    class FindNumber
+    public class FindNumber1
     {
-        public void Find()
+        public static void Find()
         {
             Console.WriteLine("Enter a limit:");
-            double limit = Convert.ToInt32(Console.ReadLine());
-            double n = Math.Pow(2, limit);
-            Console.WriteLine("Enter a guess between 0 and {0}", n - 1);
 
-        }
-        public void Question(int firstValue, int lastValue)
-        {
-
-            int mid = (firstValue + lastValue) / 2;
-            Console.WriteLine("is this  number " + mid + " is grater than your number ?");
-            char answer = Convert.ToChar(Console.ReadLine());
-
-            if (answer == 'y')
+            double N = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Math.Log(N, 2));
+            Console.WriteLine("Enter a guess between 0 and" + (N - 1));
+            double firstValue = 0;
+            double lastValue = N - 1;
+            while (n > 0)
             {
-                Question(mid, lastValue);
+                int mid = (int)(Math.Round(lastValue + firstValue) / 2);
+                Console.WriteLine("Is this Greater than " + mid + "?");
+                if (Console.ReadLine() == "y")
+                {
+                    firstValue = mid;
+
+                }
+                else
+                {
+                    lastValue = mid;
+                }
+                if ((firstValue - lastValue) == -2)
+                {
+                    Console.WriteLine("This is your Number " + (firstValue + 1));
+                    return;
+                }
+
+                n -= 1;
             }
-            else
-            {
-                Question(firstValue, mid);
-            }
+            Console.WriteLine("Taken more Than " + n + "chances");
+
         }
     }
+
 }
